@@ -1,11 +1,7 @@
-Recursiveful \ArrayObject
-=========================
+<?php
 
-Recursive PHP\ArrayObject. Like a JavaScript. Layka Rolinsto 
+require './src/RecursiveArrayObject.php';
 
-
-example:
-```php
 use \RecursiveArrayObject as JSObject;
 
 $test = [
@@ -45,4 +41,5 @@ PHP Notice:  Trying to get property of non-object
 PHP Notice:  Trying to get property of non-object
  */
 
-```
+
+die;
