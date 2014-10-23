@@ -7,16 +7,14 @@
 
 class RecursiveArrayObject extends \ArrayObject {
     public function __construct($input = null, $flags = self::ARRAY_AS_PROPS, $iterator_class = "ArrayIterator"){
-        foreach($input as $k=>$v) {
-            if (is_array($v) || is_object($v))
-                $this->offsetSet($k,(new RecursiveArrayObject($v, $flags)));
-            else
-                $this->offsetSet($k, $v);
-        }
+        foreach($input as $k=>$v) $this->__set($k, $v);
         return $this;
     }
     public function __set($name, $value){
-        $this->offsetSet($name, $value);
+        if (is_array($value) || is_object($value))
+            $this->offsetSet($name,(new self($value)));
+        else
+            $this->offsetSet($name, $value);
     }
     public function __get($name){
         if ($this->offsetExists($name))
