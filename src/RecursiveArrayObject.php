@@ -32,4 +32,26 @@ class RecursiveArrayObject extends \ArrayObject {
     public function __unset($name){
         unset($this[$name]);
     }
+    public function get(){
+
+    }
+
+    public function set($value){
+
+    }
+//    public function current(){
+//
+//    }
+//    public function key(){
+//
+//    }
+//    public function next(){
+//
+//    }
+//    public function rewind(){
+//
+//    }
+//    public function valid(){
+//
+//    }
 }
