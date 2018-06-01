@@ -3,8 +3,8 @@
   "description": "Recursiveful PHP ArrayObject. Like a JavaScript. Layka Rolinsto \\m/ ",
   "keywords": ["recursive", "arrayobject", "objectarray"],
   "minimum-stability": "dev",
-  "license": "BSDLv2",
-  "version": "0.1",
+  "license": "WTFPL",
+  "version": "0.1.2",
   "authors": [
     {
       "name": "@etconsilium",
